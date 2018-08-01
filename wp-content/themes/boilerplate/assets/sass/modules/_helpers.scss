@@ -1,0 +1,344 @@
+// _helpers.scss
+
+/**
+ * Generate Margin/Padding Helpers
+ */
+@for $i from 0 through 150 {
+  @if $i % 10 == 0 {
+    // Margins
+    .m#{$i}  { margin:#{$i}px !important; }
+    .mt#{$i} { margin-top:#{$i}px !important; }
+    .mr#{$i} { margin-right:#{$i}px !important; }
+    .mb#{$i} { margin-bottom:#{$i}px !important; }
+    .ml#{$i} { margin-left:#{$i}px !important; }
+
+    // Padding
+    .p#{$i}  { padding:#{$i}px !important; }
+    .pt#{$i} { padding-top:#{$i}px !important; }
+    .pr#{$i} { padding-right:#{$i}px !important; }
+    .pb#{$i} { padding-bottom:#{$i}px !important; }
+    .pl#{$i} { padding-left:#{$i}px !important; }
+  }
+}
+
+@include media(mobile) {
+  .mt50--mobile { margin-top: 50px; }
+  .mb50--mobile { margin-top: 50px; }
+  .mt30--mobile { margin-top: 30px; }
+  .mb30--mobile { margin-top: 30px; }
+}
+
+
+/**
+ * Generate Rotate Helpers
+ */
+@for $i from 0 through 360 {
+  @if $i % 10 == 0 {
+    .rotate#{$i}  { transform: rotate(#{$i}deg); }
+  }
+}
+
+
+
+
+
+/**
+ * Generate Helper Clases
+ * @usage example: @extend %vertical-align || add class directly to element
+ */
+
+/**
+ * Vertical Align Helpers
+ */
+.vertical-align, %vertical-align {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.v-align, %v-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/**
+ * Text Alignment
+ */
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+
+
+/**
+ * Image Cover
+ */
+%img-cover, .img-cover {
+  object-fit: cover;
+  object-position: 50% 50%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+%bg-cover, .bg-cover {
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+
+/**
+ * Transistions
+ * @usage: utilizes transition mixin @extend %transit-100 || add class directly to element
+ */
+.transit-100, %transit-100 {
+  @include transition(all 100ms ease-in-out);
+}
+.transit-200, %transit-200 {
+  @include transition(all 200ms ease-in-out);
+}
+.transit-300, %transit-300 {
+  @include transition(all 300ms ease-in-out);
+}
+.transit-1, %transit-1 {
+  @include transition(all 1s ease-in-out);
+}
+
+
+/**
+ * Hide and Show Mobile
+ */
+.mb-hd {
+  display: block;
+
+  @include media ('mobile') {
+    display: none;
+  }
+}
+
+.mb-sh {
+  display: none;
+
+  @include media ('mobile') {
+    display: block;
+  }
+}
+
+
+/**
+ * Color & General Alignment Helpers
+ */
+.centered {
+  // margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  float:none !important;
+}
+//Primary Color
+.color-primary {
+  color: $color-primary;
+}
+.bg-primary {
+  background-color: $color-primary;
+}
+//Secondary Color
+.color-secondary {
+  color: $color-secondary;
+}
+.bg-secondary {
+  background-color: $color-secondary;
+}
+//Tertiary Color
+.color-tertiary {
+  color: $color-tertiary;
+}
+.bg-tertiary {
+  background-color: $color-tertiary;
+}
+//White
+.white {
+  color: $color-white;
+}
+
+
+//Overlay Gradient
+
+.hero__overlay {
+  position: relative;
+
+  &:after,&:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &:after {
+  background: -webkit-linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(7,32,51,0.6) 100%);
+  background: -o-linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(7,32,51,0.6) 100%);
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(7,32,51,0.6) 100%);
+  }
+}
+
+.overlay-blue {
+
+  position: relative;
+
+  &:after,&:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  }
+
+  &:after {
+  background: -webkit-linear-gradient(45deg, rgba(8,27,39,1) 0%, rgba(8,27,39,0.01) 100%);
+  background: -o-linear-gradient(45deg, rgba(8,27,39,1) 0%, rgba(8,27,39,0.01) 100%);
+  background: linear-gradient(45deg, rgba(8,27,39,1) 0%, rgba(8,27,39,0.01) 100%);
+  }
+
+}
+
+.overlay-blue-right {
+
+  position: relative;
+
+  &:after,&:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  }
+
+  &:after {
+  background: -webkit-linear-gradient(-45deg, rgba(8,27,39,1) 0%, rgba(8,27,39,0.01) 100%);
+  background: -o-linear-gradient(-45deg, rgba(8,27,39,1) 0%, rgba(8,27,39,0.01) 100%);
+  background: linear-gradient(-45deg, rgba(8,27,39,1) 0%, rgba(8,27,39,0.01) 100%);
+  }
+
+}
+
+.overlay-blue-small {
+
+  position: relative;
+
+  &:after,&:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  }
+
+  &:after {
+  background: -webkit-linear-gradient(58deg, rgba(8,27,39,1) 0%, rgba(8,27,39,0.00) 43%);
+  background: -o-linear-gradient(58deg, rgba(8,27,39,1) 0%, rgba(8,27,39,0.00) 43%);
+  background: linear-gradient(58deg, rgba(8,27,39,1) 0%, rgba(8,27,39,0.00) 43%);
+  }
+
+}
+
+.overlay-columns {
+
+    position: relative;
+
+    &:after,&:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    }
+
+    &:after {
+    // background: -webkit-linear-gradient(58deg, rgba(8,27,39,1) 0%, rgba(8,27,39,0.01) 45%);
+    // background: -o-linear-gradient(58deg, rgba(8,27,39,1) 0%, rgba(8,27,39,0.01) 45%);
+    // background: linear-gradient(58deg, rgba(8,27,39,1) 0%, rgba(8,27,39,0.01) 45%);
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#072033+1,000000+100&1+0,0+100 */
+      background: -moz-linear-gradient(247deg, rgba(7,32,51,0) 0%, rgba(7,32,51,0) 29%, rgba(7,32,51,1) 100%); /* ff3.6+ */
+      background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(7,32,51,1)), color-stop(71%, rgba(7,32,51,0)), color-stop(100%, rgba(7,32,51,0))); /* safari4+,chrome */
+      background: -webkit-linear-gradient(247deg, rgba(7,32,51,0) 0%, rgba(7,32,51,0) 29%, rgba(7,32,51,1) 100%); /* safari5.1+,chrome10+ */
+      background: -o-linear-gradient(247deg, rgba(7,32,51,0) 0%, rgba(7,32,51,0) 29%, rgba(7,32,51,1) 100%); /* opera 11.10+ */
+      background: -ms-linear-gradient(247deg, rgba(7,32,51,0) 0%, rgba(7,32,51,0) 29%, rgba(7,32,51,1) 100%); /* ie10+ */
+      background: linear-gradient(203deg, rgba(7,32,51,0) 0%, rgba(7,32,51,0) 29%, rgba(7,32,51,1) 100%); /* w3c */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#072033', endColorstr='#072033',GradientType=0 ); /* ie6-9 */
+      opacity: 1;
+      @extend %transit-200;
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#072033+1,000000+100&1+0,0+100 */
+  // background: -moz-linear-gradient(45deg, rgba(7,32,51,1) 0%, rgba(7,32,51,0.99) 1%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+  // background: -webkit-linear-gradient(45deg, rgba(7,32,51,1) 0%,rgba(7,32,51,0.99) 1%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  // background: linear-gradient(45deg, rgba(7,32,51,1) 0%,rgba(7,32,51,0.`99) 1%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#072033', endColorstr='#00000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    }
+
+    &:before {
+        opacity: 0;
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(7,32,51,0)), color-stop(100%, rgba(84,216,249,1))); /* safari4+,chrome */
+        background: -webkit-linear-gradient(270deg, rgba(7,32,51,0) 0%, rgba(84,216,249,.75) 100%); /* safari5.1+,chrome10+ */
+        background: -o-linear-gradient(270deg, rgba(7,32,51,0) 0%, rgba(84,216,249,.75) 100%); /* opera 11.10+ */
+        background: -ms-linear-gradient(270deg, rgba(7,32,51,0) 0%, rgba(84,216,249,.75) 100%); /* ie10+ */
+        background: linear-gradient(180deg, rgba(7,32,51,0) 0%, rgba(84,216,249,.75) 100%); /* w3c */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#072033', endColorstr='#54d8f9',GradientType=0 ); /* ie6-9 */
+        @extend %transit-200;
+    }
+
+    &:hover {
+
+      .col-inner {
+        transform: translateY(-75px);
+        @extend %transit-200;
+      }
+
+      .btn {
+        opacity: 1;
+        @extend %transit-300;
+      }
+
+      &:before {
+        opacity: 1;
+      }
+      &:after {
+        opacity: 0;
+      }
+      // &:after {
+      //   opacity: 1;
+      //   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(7,32,51,0)), color-stop(100%, rgba(84,216,249,1))); /* safari4+,chrome */
+      //   background: -webkit-linear-gradient(270deg, rgba(7,32,51,0) 0%, rgba(84,216,249,.75) 100%); /* safari5.1+,chrome10+ */
+      //   background: -o-linear-gradient(270deg, rgba(7,32,51,0) 0%, rgba(84,216,249,.75) 100%); /* opera 11.10+ */
+      //   background: -ms-linear-gradient(270deg, rgba(7,32,51,0) 0%, rgba(84,216,249,.75) 100%); /* ie10+ */
+      //   background: linear-gradient(180deg, rgba(7,32,51,0) 0%, rgba(84,216,249,.75) 100%); /* w3c */
+      //   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#072033', endColorstr='#54d8f9',GradientType=0 ); /* ie6-9 */
+      //   @extend %transit-1
+
+    }
+
+}
+
+.right{
+  float: right;
+}

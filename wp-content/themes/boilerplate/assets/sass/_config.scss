@@ -1,0 +1,65 @@
+// _config.scss
+
+/**
+ * Font Family
+ */
+$font-heading							: "proxima-nova-extra-condensed", "OpenSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-default							: "lato", "Georgia", Georgia, serif;
+$font-roboto                            : "roboto";
+$fa										: "FontAwesome", FontAwesome;
+
+
+/**
+ * Colors
+ */
+
+$color-primary            : #074d64; // Primary Color Blue : rgb value 7, 77, 100
+$color-primary-dark       : darken($color-primary, 10%);
+$color-primary-light      : lighten($color-primary, 10%);
+
+$color-secondary          : #b6262f; // Secondary Color Red : rgb value 182, 38, 47
+$color-secondary-dark     : darken($color-secondary, 10%);
+$color-secondary-light    : lighten($color-secondary, 10%);
+
+$color-tertiary           : #6ad4cb; // Tertiary Color Teal : rgb value 106, 212, 203
+$color-tertiary-dark      : darken($color-tertiary, 10%);
+$color-tertiary-light     : lighten($color-tertiary, 10%);
+
+$color-light-gray         : #363636;
+$color-light-gray-dark    : darken($color-light-gray, 10%);
+$color-light-gray-light   : lighten($color-light-gray, 10%);
+
+$color-gray               : #eff1f4;
+$color-gray-dark          : darken($color-gray, 10%);
+$color-gray-light         : lighten($color-gray, 10%);
+
+$color-translate          : #cbddeb;
+$color-translate-dark     : darken($color-translate, 15%);
+
+$color-black              : #000;
+$color-white              : #fff;
+
+$color-anchor-default     : #4ac2be;
+$color-text-default     	: #262729;
+$color-text-light         : #595a5c;
+
+$color-success          	: #94df60;
+$color-error            	: #e16060;
+
+/**
+ * Breakpoints
+ */
+$breakpoint-mobile : 767px;
+
+
+/**
+ * Transitions
+ */
+$transitions : (
+  default : ease-in-out,
+  cubic   : cubic-bezier(.64,.09,.08,1)
+);
+
+
+
+

@@ -1,0 +1,72 @@
+// _buttons.scss
+
+$btn: (
+  height: 50px,
+  padding: 0px 72px 0px 50px,
+);
+
+
+.btn, %btn {
+ 	height: map-get($btn, height);
+	padding: map-get($btn, padding);
+    display: inline-block;
+    background-color: rgba(255,255,255,100);
+    color: $color-secondary;
+    font-family: $font-default;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: ls(12px, 200);
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: map-get($btn, height);
+    text-align: center;
+	@include transition(background 200ms ease-in-out, color 200ms ease-in-out);
+
+    &:hover{
+        background-color: $color-secondary;
+        color: $color-white;
+    }
+
+    &:after{
+        content: '\f105' '\f105';
+        font-family: $fa;
+        position: absolute;
+        padding-left: 10px;
+    }
+
+    &.btn-color {
+        background-color: $color-secondary;
+        color: $color-white;
+
+        &:hover{
+            background-color: $color-secondary-dark;
+        }
+    }
+
+}
+
+.btn-round {
+    box-sizing: border-box;
+    display:block;
+    width:80px;
+    height:80px;
+    padding-top: 14px;
+    padding-left: 8px;
+    line-height: 20px;
+    border: 6px solid #ffffff;
+    border-radius: 50%;
+    color:red;
+    text-align:center;
+    text-decoration:none;
+    background-color: #ffffff;
+    font-size:20px;
+    font-weight:bold;
+    transition: all 0.3s ease;
+    margin: 0 auto;
+
+    &:hover {
+    color: #ffffff;
+    background-color: red;
+    border: 6px solid red;
+    }
+}

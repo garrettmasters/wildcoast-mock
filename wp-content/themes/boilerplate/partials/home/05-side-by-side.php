@@ -1,6 +1,6 @@
 <?php
 
-// include ('variables.php');
+include ('variables.php');
 $container = $section[ 'side_by_side' ][0];
 
 $left_title = $container[ 'left_side_title' ];

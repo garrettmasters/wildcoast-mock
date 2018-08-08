@@ -15,16 +15,8 @@
 	<!--[if lt IE 9]>
 	<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>
 	<![endif]-->
-
-	<!-- Stylesheets -->
-	<!-- <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/style.css"> -->
-	<!-- <link rel="stylesheet" href="assets/css/style.min.css"> -->
-
-	<!-- Modernizr & Prefix Free (All other JS in footer) -->
-<!--     <script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/components/prefix-free/prefixfree.min.js"></script> -->
-
 	<!-- Typekit -->
-	<!-- <link rel="stylesheet" href="https://use.typekit.net/gxt1pgz.css"> -->
+	<link rel="stylesheet" href="https://use.typekit.net/gxt1pgz.css">
 
 	<?php wp_head(); ?>
 </head>
@@ -33,49 +25,21 @@
 
 
 	<header class="header" id="header">
+
+
+    <nav id="nav">
+    <div class="logo__container">
+        <a class="logo" href="#" title="Wildcoast" alt="Wildcoast"></a>
+    </div>
 		<?php
 			wp_nav_menu( array(
 				'container'      => '',
-				'menu_class'     => 'menu',
+				'menu_class'     => 'menu-primary',
 				'theme_location' => 'main_menu',
 				'link_before'    => '',
 				'link_after'     => '',
 			) );
 		?>
- <!--  <a class="logo" href="#" title="Wildcoast" alt="Wildcoast">
-    <img src="assets/images/logo-red.png">
-  </a> -->
-  <nav id="nav">
-    <div class="logo__container">
-        <a class="logo" href="#" title="Wildcoast" alt="Wildcoast">
-        </a>
-    </div>
-    <ul id="menu-primary">
-      <li class="translate">
-        <a class="large" href="#">Español</a>
-      </li>
-      <li>
-        <a class="large" href="#">About us</a>
-      </li>
-      <li>
-        <a class="large" href="#">What we do</a>
-      </li>
-      <li>
-        <a class="large" href="#">where we work</a>
-      </li>
-      <li>
-        <a class="large" href="#">Join Us</a>
-      </li>
-      <li>
-        <a class="large" href="#">Resources</a>
-      </li>
-      <li>
-        <a class="large" href="#">Blog</a>
-      </li>
-      <li class="donate">
-        <a class="large" href="#">Donate</a>
-      </li>
-    </ul>
   </nav>
 	</header>
 

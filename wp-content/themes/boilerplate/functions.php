@@ -113,3 +113,8 @@ function fiftyboilerplate_init()
   // require_once get_stylesheet_directory() . '/includes/cmb2-options-page.php';
 }
 add_action( 'init', 'fiftyboilerplate_init' );
+
+add_filter( 'gform_submit_button', 'form_submit_button', 10, 2 );
+function form_submit_button($button, $form) {
+    return '<input type="submit" class="button btn" id="gform_submit_button_' . $form['id'] . '" value="' . $form['button']['text'] . '">';
+}

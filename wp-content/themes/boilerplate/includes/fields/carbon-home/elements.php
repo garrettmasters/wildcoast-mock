@@ -139,26 +139,31 @@ $four_blocks_title_content_image_links = array(
 
 $donation_top_section = array($title, $content, $link);
 
-$four_column_donation_section = array(
+$donation_section = array(
   Field::make( 'complex', 'donation_block' )
-  ->  set_max(1)
+  -> set_min(4)
+  -> set_max(4)
+  ->set_layout( 'tabbed-horizontal' )
   ->add_fields( array(
-          Field::make( 'text', 'donation_title', 'Title' ),
-          Field::make( 'textarea', 'donation_textarea', 'Content' ),
-          Field::make( 'text', 'donation_small_text', 'Link Button' ),
-          Field::make( 'text', 'donation_small_link', 'Link URL' ),
-          Field::make( 'text', 'amount_one', 'Amount One' ),
-          Field::make( 'text', 'text_one', 'Text One' ),
-          Field::make( 'text', 'amount_two', 'Amount Two' ),
-          Field::make( 'text', 'text_two', 'Text Two' ),
-          Field::make( 'text', 'amount_three', 'Amount Three' ),
-          Field::make( 'text', 'text_three', 'Text Three' ),
-          Field::make( 'text', 'amount_four', 'Amount Four' ),
-          Field::make( 'text', 'text_four', 'Text Four' ),
-          Field::make( 'image', 'donation_image', 'Background Image' ),
+          // Field::make( 'text', 'donation_title', 'Title' ),
+          // Field::make( 'textarea', 'donation_textarea', 'Content' ),
+          // Field::make( 'text', 'donation_small_text', 'Link Button' ),
+          // Field::make( 'text', 'donation_small_link', 'Link URL' ),
+          // Field::make( 'image', 'donation_image', 'Background Image' ),
+          Field::make( 'text', 'donation_amount', 'Donation Amount' ),
+          Field::make( 'text', 'donation_text', 'Donation Text' ),
+          // Field::make( 'text', 'amount_two', 'Amount Two' ),
+          // Field::make( 'text', 'text_two', 'Text Two' ),
+          // Field::make( 'text', 'amount_three', 'Amount Three' ),
+          // Field::make( 'text', 'text_three', 'Text Three' ),
+          // Field::make( 'text', 'amount_four', 'Amount Four' ),
+          // Field::make( 'text', 'text_four', 'Text Four' ),
+          // Field::make( 'image', 'donation_image', 'Background Image' ),
 
   ))
 );
+
+$four_columns_donation = array_merge($title, $content, $link, $image, $donation_section );
 
 $general_blocks_title_content_links = array(
   Field::make( 'complex', 'blocks_text', 'Blocks with Image, Text, Content, and Links'  )

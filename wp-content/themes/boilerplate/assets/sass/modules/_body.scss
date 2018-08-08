@@ -46,14 +46,6 @@ a {
   -o-transition: color 0.25s, background 0.25s;
   transition: color 0.25s, background 0.25s;
 
-    &.large {
-    font-family: $font-default;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: ls(12px, 200);
-    @include fluid-type(320px, 1600px, 10px, 12px);
-    @include fluid-line-height(320px, 1600px, 22px, 22px);
-  }
 }
 
 

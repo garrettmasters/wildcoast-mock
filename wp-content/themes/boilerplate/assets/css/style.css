@@ -1,11 +1,10 @@
 /**
- * Components 
+ * Components
  *
  * @note - use this rather than components.min.css to maintain relative paths
  */
-@import url(/components/font-awesome/css/font-awesome.min.css);
 /**
- * Functions & Mixins 
+ * Functions & Mixins
  */
 /**
  * Clearfix
@@ -32,7 +31,7 @@
  * @return letter-spacing in px
  */
 /**
- * Config 
+ * Config
  */
 /**
  * Font Family
@@ -46,7 +45,7 @@
 /**
  * Transitions
  */
-/** 
+/**
  * Libraries
  */
 /* _grid.scss */
@@ -1385,7 +1384,7 @@
   transition: all 200ms ease-in-out;
 }
 
-.transit-300, .overlay-columns:hover .btn, #menu-primary .translate:hover {
+.transit-300, .overlay-columns:hover .btn, .menu-primary .translate:hover {
   -webkit-transition: all 300ms ease-in-out;
   -moz-transition: all 300ms ease-in-out;
   -o-transition: all 300ms ease-in-out;
@@ -1667,38 +1666,6 @@ a {
   -moz-transition: color 0.25s, background 0.25s;
   -o-transition: color 0.25s, background 0.25s;
   transition: color 0.25s, background 0.25s;
-}
-a.large {
-  font-family: "lato", "Georgia", Georgia, serif;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 2.4px;
-}
-a.large {
-  font-size: 10px;
-}
-@media screen and (min-width: 320px) {
-  a.large {
-    font-size: calc(10px + 2 * ((100vw - 320px) / 1280));
-  }
-}
-@media screen and (min-width: 1600px) {
-  a.large {
-    font-size: 12px;
-  }
-}
-a.large {
-  line-height: 22px;
-}
-@media screen and (min-width: 320px) {
-  a.large {
-    line-height: calc(22px + 0 * ((100vw - 320px) / 1280));
-  }
-}
-@media screen and (min-width: 1600px) {
-  a.large {
-    line-height: 22px;
-  }
 }
 
 /**
@@ -2285,6 +2252,7 @@ body.menu-open .plus-btn .r2 {
   background-size: 100% auto;
   background-repeat: no-repeat;
   margin: 10px;
+  position: absolute;
   z-index: 99999;
   left: 10px;
   color: red;
@@ -2297,10 +2265,11 @@ body.menu-open .plus-btn .r2 {
   background-color: #fff;
   top: 0;
   z-index: 9999;
-  position: sticky;
+  position: fixed;
+  width: 100%;
 }
 
-#menu-primary {
+.menu-primary {
   display: flex;
   list-style: none;
   flex-wrap: wrap;
@@ -2309,22 +2278,51 @@ body.menu-open .plus-btn .r2 {
   max-width: calc(100% - 60px);
   margin-left: 150px;
 }
-#menu-primary a {
+.menu-primary a {
   text-decoration: none;
+  font-family: "lato", "Georgia", Georgia, serif;
+  font-weight: 500;
   text-transform: uppercase;
+  letter-spacing: 2.4px;
 }
-#menu-primary li {
+.menu-primary a {
+  font-size: 10px;
+}
+@media screen and (min-width: 320px) {
+  .menu-primary a {
+    font-size: calc(10px + 2 * ((100vw - 320px) / 1280));
+  }
+}
+@media screen and (min-width: 1600px) {
+  .menu-primary a {
+    font-size: 12px;
+  }
+}
+.menu-primary a {
+  line-height: 22px;
+}
+@media screen and (min-width: 320px) {
+  .menu-primary a {
+    line-height: calc(22px + 0 * ((100vw - 320px) / 1280));
+  }
+}
+@media screen and (min-width: 1600px) {
+  .menu-primary a {
+    line-height: 22px;
+  }
+}
+.menu-primary li {
   padding: 0 20px;
   line-height: 60px;
 }
-#menu-primary .donate {
+.menu-primary .donate {
   background-color: #b6262f;
   color: #fff;
 }
-#menu-primary .translate {
+.menu-primary .translate {
   background-color: #cbddeb;
 }
-#menu-primary .translate:hover {
+.menu-primary .translate:hover {
   background-color: #94b9d6;
   cursor: pointer;
 }

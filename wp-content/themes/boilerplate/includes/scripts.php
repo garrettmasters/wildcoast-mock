@@ -30,7 +30,7 @@ function fiftyboilerplate_enqueue_scripts_styles(){
    */
 
   wp_enqueue_script( 'prefix', $component_path . 'prefix-free/prefixfree.min.js', FIFTYBOILERPLATE_VERSION, true );
-  wp_enqueue_script( 'slick', $component_path . 'slick/slick.min.js', FIFTYBOILERPLATE_VERSION, true );
+  // wp_enqueue_script( 'slick', $component_path . 'slick/slick.min.js', FIFTYBOILERPLATE_VERSION, true );
   wp_register_script( 'fiftyboilerplate-app', $js_path . 'app.js', array('jquery'), FIFTYBOILERPLATE_VERSION, true );
   wp_enqueue_script( 'fiftyboilerplate-app' );
   /**

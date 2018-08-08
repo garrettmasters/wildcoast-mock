@@ -2,11 +2,6 @@
 
 include ('variables.php');
 
-// $title  = $section['title'] ??   '';
-// $link_text  = $section['link_text'] ??   '';
-// $link_url  = $section['link_url']   ??   '';
-// $content  = $section['subtitle']    ??   '';
-
 ?>
 
 <section class="section--xlarge open-text">

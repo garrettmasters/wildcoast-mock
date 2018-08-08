@@ -1195,38 +1195,5 @@ $('.plus-btn').click(function(){
         },
 });
 
-
-
-
- // Print R for troubleshooting
-
- function _print_r($var, $die=NULL, $color=''){
-    if ($var === true) { // print_r() won't show anything for bool values
-        $var = 'true';   // so change to string
-    }
-    if ($var === false) { // print_r() won't show anything for bool values
-        $var = 'false';   // so change to string
-    }
-    $backtrace = debug_backtrace();
-    $extra = "";
-    if ($color != "") {
-        $extra = sprintf(' style="color:%s"',$color);
-    }
-    ob_start();
-    print_r($var);
-    $output = ob_get_clean();
-
-    echo "<pre $extra >";
-    printf("%s (%s)\n",$backtrace[0]['file'],$backtrace[0]['line'] );
-    echo htmlentities($output);
-    // TODO: consider switching to this line (below) if future troubles
-    #echo htmlentities($output, ENT_QUOTES | ENT_IGNORE, "UTF-8");
-    echo '</pre>';
-    if ($die)
-        die();
-}
-
-
-
   return app;
 })(jQuery);

@@ -19,7 +19,7 @@ Container::make( 'post_meta', __( 'Page Builder', 'crb' ) )
     // Left Right Text - Image Overlay
     ->add_fields('left_right_text_image', 'Left/Right Text - Image', array_merge( $left_right_text_image_overlay ))
     // Four Block Columns
-    ->add_fields('four_column_donation', '4 Column Donation Section', array_merge( $four_column_donation_section))
+    ->add_fields('four_column_donation', '4 Column Donation Section', array_merge( $four_columns_donation))
     // Blog Carousel
     ->add_fields('blog_carousel', 'Blog Carousel', array_merge( $blog_carousel))
     // Blog Carousel

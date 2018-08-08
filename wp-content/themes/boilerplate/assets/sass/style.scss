@@ -1,31 +1,31 @@
 /**
- * Components 
+ * Components
  *
  * @note - use this rather than components.min.css to maintain relative paths
  */
-@import "/components/font-awesome/css/font-awesome.min.css";
+// @import "/components/font-awesome/css/font-awesome.min.css";
 // @import "../../components/animate/animate.min.css";
 
-  
+
 /**
- * Functions & Mixins 
+ * Functions & Mixins
  */
 @import "mixins";
 @import "functions";
 
 
 /**
- * Config 
- */ 
+ * Config
+ */
 @import "config";
 
 
-/** 
+/**
  * Libraries
  */
-@import "lib/grid"; 
+@import "lib/grid";
 
-  
+
 /**
  * Modules - Core
  */
@@ -33,7 +33,7 @@
         "modules/plugins",
         "modules/fonts",
         "modules/animations";
- 
+
 
 /**
  * Modules - Components

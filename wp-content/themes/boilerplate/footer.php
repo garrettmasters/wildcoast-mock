@@ -6,12 +6,13 @@
         <div class="row">
             <div class="col-6 form white">
                 <h3>Connect with us</h3>
-                <form>
-                     <input name="firstname" type="text" id="firstname" size="20" placeholder="First Name">
+                <!-- <form> -->
+<!--                      <input name="firstname" type="text" id="firstname" size="20" placeholder="First Name">
                      <input name="lastname" type="text" id="lastname" size="20" placeholder="Last Name">
-                     <input name="email" type="email" id="email" size="47" placeholder="Email">
-                </form>
-                <a class="btn" href="#">SIGN UP</a>
+                     <input name="email" type="email" id="email" size="47" placeholder="Email"> -->
+                <!-- </form> -->
+                <?php gravity_form( 1, false, false, false, '', false ); ?>
+                <!-- <a class="btn" href="#">SIGN UP</a> -->
             </div>
             <div class="col-push-2 col-4 social white">
                 <h3>Follow Along</h3>

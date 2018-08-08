@@ -131,7 +131,7 @@ gulp.task('styles', function() {
  * TASK: Compress JS
  */
 gulp.task('appjs', function() {
-  
+
   return gulp.src( paths.js + '/app.js' )
     .on('error', logError)
     .pipe(uglify())
@@ -146,7 +146,7 @@ gulp.task('appjs', function() {
  * @todo components/__/*.min.js
  */
 gulp.task('concat-js', function() {
-  
+
   return gulp.src( components.js )
     .pipe(concat('components.min.js'))
     .pipe(uglify())
@@ -158,7 +158,7 @@ gulp.task('concat-js', function() {
  * TASK: Concatenate Stylesheets
  */
 gulp.task('concat-css', function() {
-  
+
   return gulp.src( components.css )
     .pipe(concat('components.min.css'))
     .pipe(minifycss())
@@ -177,7 +177,7 @@ gulp.task('concat', ['concat-css', 'concat-js'], function (callback) {})
  * TASK: Image Optimization
  */
 gulp.task('images', function() {
-  
+
   return gulp.src([ paths.assets +'images/**/*'])
     .pipe(imagemin({
         progressive: true,
@@ -195,7 +195,7 @@ gulp.task('images', function() {
  * TASK: Build
  */
 gulp.task('build', function() {
-  
+
 })
 
 
@@ -210,7 +210,7 @@ gulp.task('watch', function() {
 
     gulp.watch(['./assets/**/*.scss'], ['styles'], notifyLiveReload)
     gulp.watch(['./assets/**/*.css'], notifyLiveReload)
-    
+
     gulp.watch(['./assets/js/app.js'], ['appjs'], notifyLiveReload)
 
   })
@@ -226,7 +226,7 @@ gulp.task('watch', function() {
 // })
 
 gulp.task('default', [
-  'styles', 
+  'styles',
   'appjs',
   'watch'
 ], function() {
